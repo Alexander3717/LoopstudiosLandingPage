@@ -1,0 +1,22 @@
+@use 'sass:math';
+
+// converts from px to rem
+@function rem($value) {
+  @if math.is-unitless($value) {
+    @return math.div($value, 16) * 1rem;
+
+  } @else if math.unit($value) == "px" {
+    @return math.div(math.div($value, 1px), 16) * 1rem;
+  }
+  
+  @error "The rem() function only accepts unitless numbers or px values. You passed: #{$value}";
+}
+
+// makes setting up flexbox easier
+@mixin flex($dir: row, $justify: flex-start, $align: stretch, $gap: 0) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}

@@ -1,0 +1,79 @@
+@use "functions" as *;
+
+// colors
+$colors-black: #000000;
+$colors-white: #ffffff;
+$colors-blue-100: #e5eaf1;
+$colors-blue-50: #f6faff;
+$colors-grey-200: #d8d8d8;
+
+//spacings
+$spacing-0: 0px;
+$spacing-100: 8px;
+$spacing-200: 16px;
+$spacing-300: 24px;
+$spacing-400: 32px;
+$spacing-500: 40px;
+$spacing-600: 48px;
+$spacing-800: 64px;
+$spacing-1000: 80px;
+
+// text base mixins
+@mixin text-base {
+    color: inherit;
+    font-style: normal;
+    font-feature-settings: "liga" off, "clig" off;
+}
+
+@mixin text-base-josefin {
+    @include text-base;
+    font-family: "Josefin Sans";
+    font-weight: 300;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+@mixin text-base-alata {
+    @include text-base;
+    font-family: Alata;
+    font-weight: 400;
+}
+
+// desktop text presets
+@mixin text-preset-1 {
+    @include text-base-josefin;
+    font-size: 72px;
+}
+
+@mixin text-preset-2 {
+    @include text-base-josefin;
+    font-size: 48px;
+}
+
+@mixin text-preset-3 {
+    @include text-base-josefin;
+    font-size: 40px;
+}
+
+@mixin text-preset-4 {
+    @include text-base-josefin;
+    font-size: 32px;
+}
+
+@mixin text-preset-5 {
+    @include text-base-josefin;
+    font-size: 24px;
+}
+
+@mixin text-preset-6 {
+    @include text-base-alata;
+    font-size: 15px;
+    line-height: 165%;
+}
+
+@mixin text-preset-7 {
+    @include text-base-alata;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 5px;
+}
