@@ -378,13 +378,13 @@ a:visited {
         --min-left: 38%;
         --max-left: 52%;
         left: clamp(
-            calc(var(--min-left)),
+            var(--min-left),
             calc(
                 var(--min-left) + (var(--max-left) - var(--min-left)) *
                     (100vw - #{$breakpoint-desktop}) / #{$breakpoint-desktop-design -
                     $breakpoint-desktop}
             ),
-            calc(var(--max-left))
+            var(--max-left)
         );
         bottom: 0%;
         text-align: unset;
