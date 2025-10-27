@@ -360,7 +360,7 @@ a {
         --fluid-padding: clamp(
             var(--min-padding),
             calc(
-                var(--min-padding) + var(--min-padding) *
+                var(--min-padding) + (var(--max-padding) - var(--min-padding)) *
                     (100vw - #{$breakpoint-desktop}) / #{$breakpoint-desktop-design -
                     $breakpoint-desktop}
             ),

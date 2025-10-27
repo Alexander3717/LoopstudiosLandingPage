@@ -444,7 +444,7 @@ a {
     --fluid-padding: clamp(
         var(--min-padding),
         calc(
-            var(--min-padding) + var(--min-padding) *
+            var(--min-padding) + (var(--max-padding) - var(--min-padding)) *
                 (100vw - 1200px) / 240px
         ),
         var(--max-padding)
