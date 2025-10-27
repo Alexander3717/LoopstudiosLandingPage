@@ -60,8 +60,10 @@ button {
     cursor: pointer;
 }
 
-a {
+a,
+a:visited {
     text-decoration: none;
+    color: white;
 }
 
 // Utility classes
@@ -335,6 +337,10 @@ a {
 
 .main .container {
     @include flex(column, $gap: 96px);
+
+    @include respond-to($breakpoint-desktop) {
+        gap: 184px;
+    }
 }
 
 .leader-section {

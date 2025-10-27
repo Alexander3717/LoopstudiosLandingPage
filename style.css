@@ -102,8 +102,10 @@ button {
   cursor: pointer;
 }
 
-a {
+a,
+a:visited {
   text-decoration: none;
+  color: white;
 }
 
 .hidden {
@@ -406,6 +408,11 @@ a {
   justify-content: flex-start;
   align-items: stretch;
   gap: 96px;
+}
+@media (min-width: 1200px) {
+  .main .container {
+    gap: 184px;
+  }
 }
 
 .leader-section {
